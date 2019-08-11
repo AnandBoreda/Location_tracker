@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Location extends AppCompatActivity {
+public class Activity_location extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

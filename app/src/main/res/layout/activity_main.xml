@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/start_button"
         android:layout_width="183dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
         app:layout_constraintVertical_bias="0.064"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toEndOf="@+id/rate_us"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
         app:layout_constraintVertical_bias="0.121"
         app:srcCompat="?attr/actionModeShareDrawable" />
 
