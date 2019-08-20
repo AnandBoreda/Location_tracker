@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout1111"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="0dp"
+                android:layout_alignParentTop="true">
+                <FrameLayout
+                    android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/linearLayout1111">
+                <EditText
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:id="@+id/textValue"
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Add Number"
+                    android:ems="10"
+                    android:inputType="phone"/>
+                <Button
+                    android:textSize="26sp"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btnDone"
+                    android:background="@drawable/button_style"
+                    android:layout_width="140dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Done"
+                    android:layout_alignTop="@+id/textValue"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

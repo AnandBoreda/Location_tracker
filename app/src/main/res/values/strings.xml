@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Location Tracker</string>
+    <string name="locator">Mobile Locator</string>
+    <string name="mobileloc">locator</string>
+    <string name="sugartest">Sugar Test</string>
+    <string name="compass">Compass</string>
+    <string name="flashtools">Flash Tools</string>
+    <string name="ringtones">Ringtones</string>
+    <string name="cb">Call Block</string>
+    <string name="std">STD Codes</string>
+    <string name="ad">ad view</string>
+    <string name="isd">ISD Codes</string>
+    <string name="setting">Settings</string>
+    <string name="report">Report</string>
+    <string name="flash_screen">Flash Screen</string>
+    <string name="flash_clap">Flash on Clap</string>
+    <string name="flash_alert">Flash Alerts</string>
+    <string name="ringtone_create">Create</string>
+    <string name="ringtones_save">Save</string>
+    <string name="sugar_healthtips">Health Tips</string>
+    <string name="sugar_levels">Sugar Levels</string>
+    <string name="sugar_info">Sugar Info</string>
+    <string name="sugar_wd_map">BS World Map</string>
+    <string name="sugar_test">Sugar Test</string>
+    <string name="sugar_diabetes">Diabetes</string>
+    <string name="sugar_hba1c">HbA1c</string>
+    <string name="sugar_type2">Type2</string>
+    <string name="sugar_low">Low Sugar</string>
+    <string name="coun_name">Enter Country Name</string>
+    <string name="country">Find by Country</string>
+    <string name="isd_find">Find by ISD</string>
+    <string name="call_block">Block All Calls</string>
 </resources>

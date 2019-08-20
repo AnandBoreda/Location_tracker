@@ -1,20 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:background="@color/bg">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <GridView
-        android:id="@+id/simpleGridView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="3"
-        android:columnWidth="80dp"
-        android:footerDividersEnabled="false"
-        android:horizontalSpacing="40dp"
-        android:verticalSpacing="40dp"/>
+        <LinearLayout
+            android:id="@+id/linearLayout1111"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-</RelativeLayout>
+            <FrameLayout
+                android:id="@+id/r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1111"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:weightSum="1.5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/loc_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/mobile_locator"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:onClick="loc_tracker"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="@string/mobileloc"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/lowsug_bttn"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sugartest"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:onClick="sugar_test"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="@string/sugartest"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="14sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/compass_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/compass"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:onClick="compass"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="@string/compass"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/flash_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="58dp"
+                                android:background="@drawable/flashtools"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:onClick="flash_tools"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="@string/flashtools"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/ring_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/ringtones"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:onClick="ringtones"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="@string/ringtones"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
+

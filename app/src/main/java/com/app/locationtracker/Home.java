@@ -3,33 +3,41 @@ package com.app.locationtracker;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
-    GridView simpleGrid;
-    int logos[] = {R.drawable.logo1, R.drawable.logo2, R.drawable.logo3, R.drawable.logo4,
-            R.drawable.logo5, R.drawable.logo6, R.drawable.logo7, R.drawable.logo8, R.drawable.logo9,
-            R.drawable.logo10, R.drawable.logo11, R.drawable.logo12, R.drawable.logo13};
+    Button button_sugar_test, button_compass, button_loc, button_ringtones, button_flash_tools;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        simpleGrid = (GridView) findViewById(R.id.simpleGridView); // init GridView
-        // Create an object of CustomAdapter and set Adapter to GirdView
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), logos);
-        simpleGrid.setAdapter(customAdapter);
-        // implement setOnItemClickListener event on GridView
-        simpleGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // set an Intent to Another Activity
-                Intent intent = new Intent(Home.this, PerformAct.class);
-                intent.putExtra("image", logos[position]); // put image data in Intent
-                startActivity(intent); // start Intent
+        setContentView(R.layout.activity_home);
+        button_sugar_test = findViewById(R.id.lowsug_bttn);
+        button_compass = findViewById(R.id.compass_btn);
+        button_loc = findViewById(R.id.loc_btn);
+        button_ringtones = findViewById(R.id.ring_btn);
+        button_flash_tools = findViewById(R.id.flash_btn);
             }
-        });
+
+    public void sugar_test(View view) {
+        startActivity(new Intent(this, SugarTest.class));
+    }
+
+    public void compass(View view) {
+        startActivity(new Intent(this, Compass.class));
+    }
+
+    public void loc_tracker(View view) {
+        startActivity(new Intent(this, MobileLocator.class));
+    }
+
+    public void ringtones(View view) {
+        startActivity(new Intent(this, Ringtones.class));
+
+    }
+
+    public void flash_tools(View view) {
+        startActivity(new Intent(this, FlashTools.class));
     }
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout1111"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="0dp"
+                android:layout_alignParentTop="true">
+                <FrameLayout android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/linearLayout1111">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:weightSum="1.5"
+                            android:layout_weight="0.5">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/falshscrn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/flashscreeenbtn"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:singleLine="false"
+                                    android:onClick="flashscreen"
+                                    android:text="@string/flash_screen"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="14sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/flashclap"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:background="@drawable/flash_on_clapbtn"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:singleLine="false"
+                                    android:text="@string/flash_clap"
+                                    android:onClick="flashclap"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/flashalert"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/flash_alertsbtn"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:singleLine="false"
+                                    android:text="@string/flash_alert"
+                                    android:onClick="flashalert"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                        </TableRow>
+                        <RelativeLayout android:id="@+id/rel1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/button1">
+                            <Button android:id="@+id/line" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+                            <!--  <ImageView android:id="@+id/more1" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:src="@drawable/girlsselfie" android:layout_below="@+id/line"/>
+                              <ImageView android:id="@+id/more3" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:src="@drawable/marriage" android:layout_below="@+id/line" android:layout_alignParentRight="true"/>
+                              <ImageView android:id="@+id/more2" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="10dp" android:src="@drawable/selfie" android:layout_below="@+id/line" android:layout_centerHorizontal="true"/>
+                          -->  </RelativeLayout>
+                    </TableLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!--  <include layout="@layout/ad_layout"/> -->
+</RelativeLayout>

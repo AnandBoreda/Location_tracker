@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/linearLayout1111" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="0dp" android:layout_alignParentTop="true">
+                <FrameLayout android:id="@+id/fl_adplaceholder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/linearLayout1111">
+                <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TableRow android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="1.5" android:layout_weight="0.5">
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/smokingeff"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/smokeeff"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="Smoking Effects"
+                                android:onClick="smokeeff"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11sp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/sevenstrat"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/strategies"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="7 Strategies"
+                                android:onClick="sevenstrart"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/expectsug"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/bloodsugarvaluesbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="expected sugar levels"
+                                android:onClick="sugar_inf"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" /> </RelativeLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="1.5" android:layout_weight="0.5">
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/bodysug"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/howbodycontrolbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:text="Body Controls"
+                                android:onClick="bodycontrols"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+                            <Button
+                                android:id="@+id/sugadd"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sugeraddictonbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="Sugar Addiction"
+                                android:onClick="sugaradd"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" /> </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/suginfla"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/sugarinformationbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:text="Sugar Inflamation"
+                                android:onClick="sugarinfla"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="1.5" android:layout_weight="0.5">
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                            <Button
+                                android:id="@+id/sugreason"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/quitsugarbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="8dp"
+                                android:text="10 Reasons"
+                                android:onClick="reasons"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+                            <Button
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textSize="11dp"
+                                android:typeface="serif"
+                                android:textColor="#000000"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:id="@+id/sughema"
+                                android:background="@drawable/glycatedhemoglobinbtn"
+                                android:onClick="hema"
+                                android:paddingBottom="5dp"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="15dp"
+                                android:text="Glycated Hemoglobin"/>
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+                            <Button
+                                android:id="@+id/fastsug"
+                                android:layout_width="90dp"
+                                android:layout_height="105dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/fastingbloodsugarlevelsbtn"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="7dp"
+                                android:singleLine="false"
+                                android:text="Fasting Blood Sugar Levels"
+                                android:onClick="fasting"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:typeface="serif" /></RelativeLayout>
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

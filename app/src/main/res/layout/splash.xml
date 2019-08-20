@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".Splash">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="451dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/splash"
+        android:text="Loading"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/splashbtn"
+        android:layout_width="205dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginLeft="107dp"
+        android:layout_marginBottom="99dp"
+        android:background="@drawable/button_style"
+        android:text="@string/app_name" />
+
+
+</RelativeLayout>

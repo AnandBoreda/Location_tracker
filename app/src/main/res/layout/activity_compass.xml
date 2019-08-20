@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/linearLayout1111" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="0dp" android:layout_alignParentTop="true">
+                <FrameLayout android:id="@+id/fl_adplaceholder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/linearLayout1111">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TableRow android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="1.5" android:layout_weight="0.5">
+                            <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/compass_btn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:background="@drawable/compass"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:onClick="compassmain"
+                                    android:singleLine="false"
+                                    android:text="@string/compass"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="14sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                            <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/ad_btn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:background="@drawable/ad"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:singleLine="false"
+                                    android:text="ad"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                            <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
+                                <Button
+                                    android:id="@+id/report_btn"
+                                    android:layout_width="90dp"
+                                    android:layout_height="105dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/reportsbtn"
+                                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:paddingBottom="7dp"
+                                    android:singleLine="false"
+                                    android:text="Report"
+                                    android:onClick="compassreport"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#000000"
+                                    android:textSize="11sp"
+                                    android:typeface="serif" />
+                            </RelativeLayout>
+                        </TableRow>
+                    </TableLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <!--  <include layout="@layout/ad_layout"/> -->
+</RelativeLayout>

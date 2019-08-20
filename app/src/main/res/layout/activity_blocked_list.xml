@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:id="@+id/addpage1"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/text_blocklist"
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="BLOCKED LIST"/>
+    <TextView
+        android:textSize="35sp"
+        android:textColor="@color/bg"
+        android:gravity="center_horizontal"
+        android:id="@+id/vw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="  No Records Found !!!"
+        android:layout_centerVertical="true"/>
+    <ListView
+        android:id="@+id/list_item_iterator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_blocklist"/>
+</RelativeLayout>

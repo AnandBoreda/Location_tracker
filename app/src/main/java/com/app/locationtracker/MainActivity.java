@@ -4,47 +4,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
-    private ImageView imageView;
+    Button button;
+    Button bt;
+    private Handler hand = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        imageView = findViewById(R.id.imageView2);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(Intent.ACTION_SEND);
-                myIntent.setType("text/plain");
-                String shareBody = "body";
-                String shareSub = "sub";
-                myIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
-                myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                startActivity(Intent.createChooser(myIntent, "Share Using"));
-            }
-        });
-
         button = findViewById(R.id.start_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity_location();
-
-            }
-        });
+        bt = findViewById(R.id.share_app_id);
     }
 
-    public  void openActivity_location(){
-        Intent intent = new Intent(this, Activity_location.class);
-        startActivity(intent);
+    public void start_btn(View view) {
+        startActivity(new Intent(this, Home.class));
+    }
+
+    public void sharebtn(View view) {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "app link";
+        String shareSub = "Location Tracker";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share to friends using"));
     }
 }
+
+
+
 
