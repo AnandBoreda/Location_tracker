@@ -1,8 +1,7 @@
 package com.app.locationtracker;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
@@ -12,39 +11,61 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
-public class TorchMain extends AppCompatActivity {
-    /**
-     * Object for camera service
-     */
+import androidx.annotation.RequiresApi;
+
+public class TorchMain extends Activity {
+
     private CameraManager objCameraManager;
-    /**
-     * id of current camera
-     */
     private String mCameraId;
-    /**
-     * imageview in design which controls the flash light
-     */
     private ImageView ivOnOFF;
-    /**
-     * Object of medial player to play sound while flash on/off
-     */
     private MediaPlayer objMediaPlayer;
+
     /**
      * for getting torch mode
      */
     private Boolean isTorchOn;
 
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_torch_main);
-        ivOnOFF = (ImageView) findViewById(R.id.ivOnOFF);
+        setContentView(R.layout.activity_main);
+        ivOnOFF =  findViewById(R.id.ivOnOFF);
         isTorchOn = false;
 
-        check();
+        /**
+         * Check if device contains flashlight
+         *
+         * if not then exit from screen
+         *
+         */
+        Boolean isFlashAvailable = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+
+        if (!isFlashAvailable) {
+            AlertDialog alert = new AlertDialog.Builder(TorchMain.this).create();
+            alert.setTitle(getString(R.string.app_name));
+            alert.setMessage(getString(R.string.msg_error));
+            alert.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.lbl_ok), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            alert.show();
+            return;
+        }
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            objCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+        }
+        try {
+            mCameraId = objCameraManager.getCameraIdList()[0];
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
 
         ivOnOFF.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,47 +83,17 @@ public class TorchMain extends AppCompatActivity {
                 }
             }
         });
-
-/**
- * Check if device contains flashlight
- *
- * if not then exit from screen
- *
- */
-public int
-
-        Boolean isFlashAvailable = getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-        if (!isFlashAvailable) {
-            AlertDialog alert = new AlertDialog.Builder(TorchMain.this).create();
-            alert.setTitle(getString(R.string.app_name));
-            alert.setMessage(getString(R.string.msg_error));
-            alert.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.lbl_ok), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            });
-            alert.show();
-            return;
-        }
     }
-    objCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
-try {
-        mCameraId = objCameraManager.getCameraIdList()[0];
-    } catch (
-    CameraAccessException e) {
-        e.printStackTrace();
-    }
-
-
 
     /**
      * Method for turning light ON
      */
     public void turnOnLight() {
+
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, true);
-                playOnOffSound();
+                //playOnOffSound();
                 ivOnOFF.setImageResource(R.drawable.on);
             }
         } catch (Exception e) {
@@ -114,26 +105,21 @@ try {
      * Method for turning light OFF
      */
     public void turnOffLight() {
+
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, false);
-                playOnOffSound();
+                //playOnOffSound();
                 ivOnOFF.setImageResource(R.drawable.off);
+
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    private void playOnOffSound() {
-        objMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.flash_sound);
-        objMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                mp.release();
-            }
-        });
-        objMediaPlayer.start();
-    }
+
+
 
     @Override
     protected void onStop() {
@@ -142,6 +128,7 @@ try {
             turnOffLight();
         }
     }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -149,6 +136,7 @@ try {
             turnOffLight();
         }
     }
+
     @Override
     protected void onResume() {
         super.onResume();

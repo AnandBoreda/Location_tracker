@@ -30,4 +30,6 @@
     <string name="country">Find by Country</string>
     <string name="isd_find">Find by ISD</string>
     <string name="call_block">Block All Calls</string>
+    <string name="msg_error">Error: No Flash Found</string>
+    <string name="lbl_ok">OK</string>
 </resources>
