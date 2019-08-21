@@ -20,7 +20,7 @@ public class TorchMain extends Activity {
 
     private CameraManager objCameraManager;
     private String mCameraId;
-    private ImageView ivOnOFF;
+    private Button ivOnOFF;
     private MediaPlayer objMediaPlayer;
 
     /**
@@ -32,7 +32,7 @@ public class TorchMain extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_torch_main);
         ivOnOFF =  findViewById(R.id.ivOnOFF);
         isTorchOn = false;
 
@@ -62,6 +62,7 @@ public class TorchMain extends Activity {
             objCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         }
         try {
+            assert objCameraManager != null;
             mCameraId = objCameraManager.getCameraIdList()[0];
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -94,7 +95,7 @@ public class TorchMain extends Activity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, true);
                 //playOnOffSound();
-                ivOnOFF.setImageResource(R.drawable.on);
+               // ivOnOFF.setImageResource(R.drawable.on);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -110,7 +111,7 @@ public class TorchMain extends Activity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, false);
                 //playOnOffSound();
-                ivOnOFF.setImageResource(R.drawable.off);
+                //ivOnOFF.setImageResource(R.drawable.off);
 
             }
 
