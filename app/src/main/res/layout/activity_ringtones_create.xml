@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RingtonesCreate">
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/1033173712"></com.google.android.gms.ads.AdView>
+<!-- This file is /res/layout/main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
+    <EditText android:id="@+id/wordsToSpeak"
+        android:text="your name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button android:id="@+id/speakBtn"
+        android:text="Speak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doButton"
+        android:enabled="false" />
+
+    <TextView android:id="@+id/filenameLabel"
+        android:text="Filename:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/filename"
+        android:text="/sdcard/donquixote.wav"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/recordBtn"
+        android:text="Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doButton"
+        android:enabled="false" />
+
+    <Button android:id="@+id/playBtn"
+        android:text="Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doButton"
+        android:enabled="false" />
+
+    <TextView android:id="@+id/useWithLabel"
+        android:text="Use with:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText android:id="@+id/realText"
+        android:text="Don Quixote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/assocBtn"
+        android:text="Associate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doButton"
+        android:enabled="false" />
+
+</LinearLayout>
