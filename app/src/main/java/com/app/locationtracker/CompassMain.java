@@ -22,8 +22,6 @@ public class CompassMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compass_main);
         standard = findViewById(R.id.start_button);
-        cam = findViewById(R.id.camera_mode);
-        telescope = findViewById(R.id.telescope_mode);
         night = findViewById(R.id.night_mode);
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
@@ -80,21 +78,12 @@ public class CompassMain extends AppCompatActivity {
 
     }
 
-    public void compasscam(View view) {
-        startActivity(new Intent(this,CompassCamMode.class));
-        Intertialshow();
-
-    }
 
     public void comstandard(View view) {
         startActivity(new Intent(this,CompassStandardMode.class));
         Intertialshow();
     }
 
-    public void compasstele(View view) {
-        startActivity(new Intent(this,CompassTeleMode.class));
-        Intertialshow();
-    }
 
     public void compassnight(View view) {
         startActivity(new Intent(this,CompassNightMode.class));

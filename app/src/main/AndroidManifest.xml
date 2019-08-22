@@ -35,9 +35,7 @@
         <activity android:name=".SugarStrategies" />
         <activity android:name=".SmokeEff" />
         <activity android:name=".CompassNightMode" />
-        <activity android:name=".CompassTeleMode" />
         <activity android:name=".CompassStandardMode" />
-        <activity android:name=".CompassCamMode" />
         <activity android:name=".FlashAlertMain" />
         <activity android:name=".FlashClapMain" />
         <activity android:name=".ColorLightMain" />
