@@ -9,6 +9,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -99,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
+        Intertialshow();
+    }
+
+    public void rate_us(View view) {
+
+        String url = "https://www.google.com";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+
         Intertialshow();
     }
 }

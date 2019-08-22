@@ -2,21 +2,26 @@ package com.app.locationtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
-public class HbA1cMain extends AppCompatActivity {
+public class Exit extends AppCompatActivity {
+
     private InterstitialAd mInterstitialAd;
     AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hba1c_main);
+        setContentView(R.layout.activity_exit);
+
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
         //ca-app-pub-3940256099942544/8691691433
@@ -68,11 +73,19 @@ public class HbA1cMain extends AppCompatActivity {
     { if (mInterstitialAd.isLoaded()) { mInterstitialAd.show(); }
     else
     { finish(); }
+    }
 
+    public void exit(View view) {
+       finish();
+    }
+
+    public void cancel(View view) {
+        startActivity(new Intent(this, Home.class));
     }
     @Override
     public void onBackPressed()
     {
+        startActivity(new Intent(this, Home.class));
         Intertialshow();
     }
 }

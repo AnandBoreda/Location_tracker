@@ -9,6 +9,8 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+
+import android.content.Intent;
 import android.os.Bundle;
 
 public class Locator extends AppCompatActivity {
@@ -41,5 +43,6 @@ public class Locator extends AppCompatActivity {
     public void onBackPressed()
     {
         Intertialshow();
+        startActivity(new Intent (this, Home.class));
     }
 }

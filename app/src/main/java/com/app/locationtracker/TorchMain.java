@@ -95,7 +95,7 @@ public class TorchMain extends Activity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, true);
                 //playOnOffSound();
-               // ivOnOFF.setImageResource(R.drawable.on);
+               // ivOnOFF.setImageResource(R.drawable.clap_on);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +111,7 @@ public class TorchMain extends Activity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 objCameraManager.setTorchMode(mCameraId, false);
                 //playOnOffSound();
-                //ivOnOFF.setImageResource(R.drawable.off);
+                //ivOnOFF.setImageResource(R.drawable.clap_off);
 
             }
 
