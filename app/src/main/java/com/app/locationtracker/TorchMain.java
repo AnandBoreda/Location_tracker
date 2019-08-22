@@ -12,10 +12,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.annotation.RequiresApi;
 
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class TorchMain extends Activity {
 
     private CameraManager objCameraManager;
