@@ -6,4 +6,5 @@
     <color name="bg">#9A51B8AF</color>
     <color name="cm">#A0FFFF00</color>
     <color name="nightmode">#89443B3B</color>
+    <color name="dark">#000</color>
 </resources>
