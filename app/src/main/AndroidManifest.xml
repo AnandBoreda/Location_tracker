@@ -29,7 +29,6 @@
         <activity android:name=".Agebelow" />
         <activity android:name=".Ageabove" />
         <activity android:name=".ScreenLight" />
-        <activity android:name=".LocatorResult" />
         <activity android:name=".Exit" />
         <activity android:name=".SugarFastingLevels" />
         <activity android:name=".SugarHema" />
@@ -84,6 +83,7 @@
         <activity android:name=".CompassMain" />
         <activity android:name=".FlashTools" />
         <activity android:name=".MobileLocator" />
+        <activity android:name=".Locator"/>
         <activity android:name=".Ringtones" />
         <activity android:name=".SugarTest" />
         <activity android:name=".Home" />
