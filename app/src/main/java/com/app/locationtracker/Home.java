@@ -104,7 +104,7 @@ public class Home extends AppCompatActivity {
     }
 
     public void flash_tools(View view) {
-        startActivity(new Intent(this, FlashTools.class));
+        startActivity(new Intent(this, FlashScreenMain.class));
         Intertialshow();
     }
     @Override
