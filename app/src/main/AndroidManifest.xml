@@ -64,7 +64,6 @@
         <activity android:name=".LocSettings" />
         <activity android:name=".CallBlocker" />
         <activity android:name=".ISDCodes" />
-        <activity android:name=".Locator" />
         <activity android:name=".Compass" />
         <activity android:name=".CompassMain" />
         <activity android:name=".FlashTools" />
