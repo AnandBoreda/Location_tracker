@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PoliceSirenMain">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/colorred"
-            android:src="#FF0000"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ImageView>
-        <ImageView
-            android:id="@+id/colorblue"
-            android:src="#0044FF"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ImageView>
+    <View
 
-    </RelativeLayout>
-</LinearLayout>
+        android:id="@+id/my_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </View>
+</RelativeLayout>

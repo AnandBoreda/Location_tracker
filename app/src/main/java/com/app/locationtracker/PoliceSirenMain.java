@@ -3,38 +3,47 @@ package com.app.locationtracker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 
 public class PoliceSirenMain extends AppCompatActivity {
-    Handler color = new Handler();
-    ImageView red,blue;
-
+    final static int INTERVAL = 500;
+    private static View myView = null;
+    boolean whichColor = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_police_siren_main);
-        red = findViewById(R.id.colorred);
-        blue = findViewById(R.id.colorblue);
-
-
-        for (int k = 1; k < 100; k++) {
-            for (int i = 1; i < 2; i++) {
-                for (int j = 1; j < 2; j++) {
-                    color.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            blue.setVisibility(View.VISIBLE);
-                            red.setVisibility(View.INVISIBLE);
-
-                        }
-                    }, 500);
+        setContentView(R.layout.activity_police_siren_main);  myView =  findViewById(R.id.my_view);
+        myView.setBackgroundColor(Color.RED);// set initial colour
+        new Thread(new Runnable() {
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(INTERVAL);
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    updateColor();
+                    whichColor = !whichColor;
                 }
-                red.setVisibility(View.VISIBLE);
-                blue.setVisibility(View.INVISIBLE);
             }
-        }
+        }).start();
     }
+
+    private void updateColor() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (whichColor)
+                    myView.setBackgroundColor(Color.RED);
+                else
+                    myView.setBackgroundColor(Color.BLUE);
+            }
+        });
+    }
+
 }
