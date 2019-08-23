@@ -1,7 +1,10 @@
 package com.app.locationtracker;
 
+import android.app.Activity;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,22 +20,40 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-class Locator extends AsyncTask<Void, Void, String> {
+public class Locator extends Activity {
+    EditText e;
+    static TextView networkfield, region;
+    Spinner s;
+    Button b;
+    static String mobile, text;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_locator);
+        e = Locator.this.findViewById(R.id.mobile_number);
+        s = findViewById(R.id.country_code);
+        networkfield = findViewById(R.id.network_field);
+        region = findViewById(R.id.region);
+
+    }
+
+    public void find(View v){
+        mobile = e.getText().toString().trim();
+        new NumVeri().execute();
+    }
+}
+class NumVeri extends AsyncTask<Void, Void, String> {
     private String API_URL = "http://apilayer.net/api/validate";
     private String API_KEY = "bdcf9ba9875952058f4daed04367006a";
-    EditText etext;
-    Button butt;
-    TextView number;
-    Spinner countryCode;
-
+    Locator l = new Locator();
     private Exception exception;
-
 
 
     @Override
     protected String doInBackground(Void... voids) {
         try {
-           URL url = new URL(API_URL + "?access_key=" + API_KEY + "&number=" + number + "&country_code=" + countryCode);
+            Log.e("MOBILE", "" + l.mobile);
+            URL url = new URL(API_URL + "?access_key=" + API_KEY + "&number=" + l.mobile);//+ "&country_code=" + l.text);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -53,26 +74,20 @@ class Locator extends AsyncTask<Void, Void, String> {
     }
 
     protected void onPostExecute(String response) {
-        if(response == null) {
-            response = "THERE WAS AN ERROR";
-            //Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
-            return;
-        }
-        Log.i("INFO", response);
         try {
             JSONObject object = (JSONObject) new JSONTokener(response).nextValue();
-            String countryname = object.getString("country_name");
-            int location = object.getInt("location");
+            String location = object.getString("location");
             String carrier = object.getString("carrier");
-            String line_type = object.getString("line_type");
+            if (response == null) {
+                response = "THERE WAS AN ERROR";
+            }
 
-            //Set the text to view from here
-            // TODO Add to specific text views in the XML file
-            // Like countrycode -> country code's text view etc
+            Log.i("INFO", response);
+            l.region.setText(location);
+            l.networkfield.setText(carrier);
+
         } catch (JSONException e) {
-            Log.w("INFO", response);
+            e.printStackTrace();
         }
-        // responseView.setText(response);
     }
-
 }

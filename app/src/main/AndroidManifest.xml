@@ -28,8 +28,7 @@
         <activity android:name=".Pregnant" />
         <activity android:name=".Agebelow" />
         <activity android:name=".Ageabove" />
-        <activity android:name=".ScreenLight" />
-        <activity android:name=".LocatorResult" />
+        <activity android:name=".Locator" />
         <activity android:name=".Exit" />
         <activity android:name=".SugarFastingLevels" />
         <activity android:name=".SugarHema" />

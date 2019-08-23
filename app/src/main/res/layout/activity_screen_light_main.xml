@@ -14,12 +14,18 @@
         android:layout_height="match_parent"
         android:gravity="center">
         <Button
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:id="@+id/whitebtn"
             android:onClick="whitebtn"
             android:background="@drawable/lgt_start">
         </Button>
-
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/blackbtn"
+            android:background="@drawable/lgt_stop"
+            android:onClick="blackbtn">
+        </Button>
     </RelativeLayout>
 </RelativeLayout>
