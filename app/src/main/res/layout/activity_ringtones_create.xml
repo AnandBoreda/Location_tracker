@@ -2,15 +2,19 @@
 <!-- This file is /res/layout/main.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
+    android:background="@color/bg"
     android:layout_height="fill_parent">
 
     <EditText android:id="@+id/wordsToSpeak"
-        android:text="your name"
+        android:text=" enter your name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
+
+
     <Button android:id="@+id/speakBtn"
         android:text="Speak"
+        android:background="@drawable/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="doButton"
@@ -22,13 +26,14 @@
         android:layout_height="wrap_content"/>
 
     <EditText android:id="@+id/filename"
-        android:text="/sdcard/donquixote.wav"
+        android:text="/sdcard0/.wav"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
     <Button android:id="@+id/recordBtn"
         android:text="Record"
         android:layout_width="wrap_content"
+        android:background="@drawable/button_style"
         android:layout_height="wrap_content"
         android:onClick="doButton"
         android:enabled="false" />
@@ -36,6 +41,7 @@
     <Button android:id="@+id/playBtn"
         android:text="Play"
         android:layout_width="wrap_content"
+        android:background="@drawable/button_style"
         android:layout_height="wrap_content"
         android:onClick="doButton"
         android:enabled="false" />
@@ -46,7 +52,7 @@
         android:layout_height="wrap_content"/>
 
     <EditText android:id="@+id/realText"
-        android:text="Don Quixote"
+        android:text="name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
 
@@ -55,14 +61,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="doButton"
+        android:background="@drawable/button_style"
         android:enabled="false" />
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/1033173712"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="ca-app-pub-3940256099942544/1033173712">
+    </com.google.android.gms.ads.AdView>
 
 </LinearLayout>

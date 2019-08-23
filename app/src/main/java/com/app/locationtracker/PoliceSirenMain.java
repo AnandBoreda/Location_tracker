@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class PoliceSirenMain extends AppCompatActivity {
-    final static int INTERVAL = 500;
+    final static int INTERVAL = 200;
     private static View myView = null;
     boolean whichColor = true;
     @Override

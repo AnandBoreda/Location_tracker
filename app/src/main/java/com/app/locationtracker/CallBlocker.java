@@ -86,7 +86,7 @@ public class CallBlocker extends AppCompatActivity {
     }
 
     public void fromconblk(View view) {
-        startActivity(new Intent(this, BlockFromCon.class));
+        startActivity(new Intent(this, BlockContacts.class));
         Intertialshow();
 
     }
