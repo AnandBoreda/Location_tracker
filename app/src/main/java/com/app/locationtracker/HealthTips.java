@@ -21,7 +21,7 @@ public class HealthTips extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_tips);
-        strat = findViewById(R.id.sevenstrat);
+        strat = (Button) findViewById(R.id.sevenstrart);
        eff = findViewById(R.id.smokingeff);
         expect= findViewById(R.id.expectsug);
         body= findViewById(R.id.bodysug);

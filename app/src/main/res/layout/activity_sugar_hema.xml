@@ -5,5 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SugarHema">
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glycatedhemoglobin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

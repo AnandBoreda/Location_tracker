@@ -54,7 +54,7 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/sugar_info_btn"
+                                android:id="@+id/info"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
@@ -73,7 +73,7 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/bsworld_map"
+                                android:id="@+id/world"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="8dp"
@@ -89,7 +89,7 @@
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
                             <Button
-                                android:id="@+id/sugar_test_main"
+                                android:id="@+id/testsug"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
@@ -106,7 +106,7 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/diabetes_bttn"
+                                android:id="@+id/dia"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
@@ -125,7 +125,7 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/hba1c_bttn"
+                                android:id="@+id/hb"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="8dp"
@@ -145,7 +145,7 @@
                                 android:typeface="serif"
                                 android:textColor="#000000"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
-                                android:id="@+id/sug_report"
+                                android:id="@+id/repo"
                                 android:background="@drawable/reports"
                                 android:onClick="sugreport"
                                 android:paddingBottom="5dp"
@@ -156,7 +156,7 @@
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
                             <Button
-                                android:id="@+id/lowsug_bttn"
+                                android:id="@+id/lowsu"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"

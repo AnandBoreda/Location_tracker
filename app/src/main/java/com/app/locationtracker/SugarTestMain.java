@@ -21,7 +21,7 @@ public class SugarTestMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sugar_test_main);
-        lowsug = findViewById(R.id.lowsug_bttn);
+        lowsug = findViewById(R.id.lowga);
         bloodtst = findViewById(R.id.bloodtest);
         ketlvl = findViewById(R.id.testyourketonelevels);
 

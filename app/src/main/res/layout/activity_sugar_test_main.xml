@@ -74,7 +74,7 @@
                                     android:typeface="serif"
                                     android:textColor="#000000"
                                     android:gravity="bottom|center_vertical|center_horizontal|center"
-                                    android:id="@+id/lowbslevels"
+                                    android:id="@+id/lowga"
                                     android:background="@drawable/lowbloodsugarbtn"
                                     android:onClick="lowsugarbtn"
                                     android:paddingBottom="7dp"

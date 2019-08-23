@@ -23,16 +23,16 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/smoking"
+                                android:id="@+id/ageabove"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
+                                android:onClick="ageabove"
                                 android:layout_marginLeft="8dp"
-                                android:background="@drawable/button_style"
+                                android:background="@drawable/targetbloodtwentybelowbtn"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
                                 android:singleLine="false"
-                                android:text="Smoking Effects"
-                                android:onClick="smokebtn"
+                                android:text="Age 20 Above"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="11sp"
@@ -41,34 +41,34 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/sevenstrat"
+                                android:id="@+id/agebelow"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
-                                android:background="@drawable/sugar_levelsbtn"
+                                android:background="@drawable/healthtipsbtn"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
                                 android:singleLine="false"
-                                android:text="7 Strategies"
-                                android:onClick="sevenstrart"
+                                android:text="Age 20 Below"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
+                                android:onClick="agebelow"
                                 android:textSize="15sp"
                                 android:typeface="serif" />
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/sugar_info_btn"
+                                android:id="@+id/pregnant"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
                                 android:background="@drawable/sugar_info"
+                                android:onClick="pregnant"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
                                 android:singleLine="false"
-                                android:text="@string/sugar_info"
-                                android:onClick="sugar_inf"
+                                android:text="Pregnant women"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"
@@ -78,32 +78,33 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/bsworld_map"
+                                android:id="@+id/suglevelsmm"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="8dp"
                                 android:background="@drawable/worldmapbtn"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
-                                android:text="@string/sugar_wd_map"
-                                android:onClick="bsmap"
+                                android:text="suagr levels"
+                                android:onClick="suglevelsmain"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"
                                 android:typeface="serif" />
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
                             <Button
-                                android:id="@+id/sugar_test_main"
+                                android:id="@+id/glulcose"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
                                 android:background="@drawable/sugartest"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
+                                android:onClick="glucose"
                                 android:singleLine="false"
-                                android:text="@string/sugar_test"
-                                android:onClick="sug_tst"
+                                android:text="glucose levels"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"
@@ -111,15 +112,15 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/diabetes_bttn"
+                                android:id="@+id/kidsadults"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
                                 android:background="@drawable/diabetesbtn"
+                                android:onClick="kidsadults"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
-                                android:text="@string/sugar_diabetes"
-                                android:onClick="dbts"
+                                android:text="kids and adults"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"
@@ -130,38 +131,41 @@
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/hba1c_bttn"
+                                android:id="@+id/riskweight"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
+                                android:onClick="atrisk"
                                 android:layout_marginLeft="8dp"
-                                android:background="@drawable/hba1cbtn"
+                                android:background="@drawable/sugar_levelsbtn"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="8dp"
-                                android:text="@string/sugar_hba1c"
-                                android:onClick="hba1c_bttn"
+                                android:text="At risk weight"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"
                                 android:typeface="serif" />
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
-                            <Button android:textAppearance="?android:attr/textAppearanceMedium"
-                                android:textSize="15sp"
-                                android:typeface="serif"
-                                android:textColor="#000000"
-                                android:gravity="bottom|center_vertical|center_horizontal|center"
-                                android:id="@+id/sug_report"
-                                android:background="@drawable/reports"
-                                android:onClick="sugreport"
-                                android:paddingBottom="5dp"
+
+                            <Button
+                                android:id="@+id/sugchart"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
-                                android:text="@string/report"/>
+                                android:background="@drawable/reports"
+                                android:gravity="bottom|center_vertical|center_horizontal|center"
+                                android:paddingBottom="5dp"
+                                android:text="sugar chart"
+                                android:onClick="sugchartmainoo"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:typeface="serif" />
                         </RelativeLayout>
                         <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.5">
+
                             <Button
-                                android:id="@+id/lowsug_bttn"
+                                android:id="@+id/suglevlchart"
                                 android:layout_width="90dp"
                                 android:layout_height="105dp"
                                 android:layout_marginLeft="15dp"
@@ -169,8 +173,8 @@
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:paddingBottom="7dp"
                                 android:singleLine="false"
-                                android:text="@string/sugar_low"
-                                android:onClick="lowsugr"
+                                android:onClick="sugchart"
+                                android:text="level chart"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#000000"
                                 android:textSize="15sp"

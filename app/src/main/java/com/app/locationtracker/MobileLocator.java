@@ -14,12 +14,12 @@ public class MobileLocator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mobile_locator);
-        locator = findViewById(R.id.health_tips);
+        locator = findViewById(R.id.locmob);
         isd_codes_btn = findViewById(R.id.isd_codes);
-        loc_settings = findViewById(R.id.hba1c_bttn);
-        std_codes = findViewById(R.id.bsworld_map);
-        call_block = findViewById(R.id.sugar_lvls);
-        loc_report = findViewById(R.id.sug_report);
+        loc_settings = findViewById(R.id.settings);
+        std_codes = findViewById(R.id.stdcodes);
+        call_block = findViewById(R.id.callblock);
+        loc_report = findViewById(R.id.locreport);
 
     }
     public void call_block(View view) {

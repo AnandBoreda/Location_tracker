@@ -83,7 +83,7 @@
                             android:layout_weight="0.5">
 
                             <Button
-                                android:id="@+id/lowsug_bttn"
+                                android:id="@+id/suglevlchart"
                                 android:layout_width="100dp"
                                 android:layout_height="120dp"
                                 android:layout_marginLeft="15dp"

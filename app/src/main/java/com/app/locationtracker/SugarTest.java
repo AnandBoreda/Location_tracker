@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class SugarTest extends AppCompatActivity {
-    Button hlth,lvls,info,map,tst,hba1c,low,report;
+    Button hlth,lvls,info,map,tst,hba1c,low,report,dbts;
     private InterstitialAd mInterstitialAd;
     AdView mAdView;
 
@@ -23,12 +23,14 @@ public class SugarTest extends AppCompatActivity {
         setContentView(R.layout.activity_sugar_test);
         hlth = findViewById(R.id.health_tips);
         lvls = findViewById(R.id.sugar_lvls);
-        info = findViewById(R.id.sugar_info_btn);
-        map = findViewById(R.id.bsworld_map);
-        tst = findViewById(R.id.sugar_test_main);
-        hba1c = findViewById(R.id.hba1c_bttn);
-        low = findViewById(R.id.lowsug_bttn);
-        report = findViewById(R.id.sug_report);
+        info = findViewById(R.id.info);
+        map = findViewById(R.id.world);
+        tst = findViewById(R.id.testsug);
+        hba1c = findViewById(R.id.hb);
+        low = findViewById(R.id.lowsu);
+        dbts = findViewById(R.id.dia);
+
+        report = findViewById(R.id.repo);
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
         //ca-app-pub-3940256099942544/8691691433
         mAdView = findViewById(R.id.adView);

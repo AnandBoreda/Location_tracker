@@ -23,7 +23,7 @@ public class Home extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        button_sugar_test = findViewById(R.id.lowsug_bttn);
+        button_sugar_test  = findViewById(R.id.suglevlchart);
         button_compass = findViewById(R.id.compass_btn);
         button_loc = findViewById(R.id.loc_btn);
         button_ringtones = findViewById(R.id.ring_btn);
