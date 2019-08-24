@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:textColor="#fff"
         android:layout_marginBottom="40dp"
         android:layout_marginTop="20dp"
         android:textSize="30dp"
@@ -16,10 +17,11 @@
 
     <ImageView
         android:id="@+id/imageViewCompass"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="237dp"
+        android:layout_height="211dp"
         android:layout_below="@+id/tvHeading"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
         android:src="@drawable/cmpngt" />
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"

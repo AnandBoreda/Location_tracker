@@ -10,6 +10,8 @@ import android.hardware.camera2.CameraManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,7 +35,7 @@ public class TorchMain extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_torch_main);
-        ivOnOFF =  findViewById(R.id.ivOnOFF);
+        ivOnOFF = findViewById(R.id.ivOnOFF);
         isTorchOn = false;
 
         /**
@@ -71,6 +73,7 @@ public class TorchMain extends Activity {
         ivOnOFF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 try {
                     if (isTorchOn) {
                         turnOffLight();
@@ -84,7 +87,10 @@ public class TorchMain extends Activity {
                 }
             }
         });
+
+
     }
+
 
     /**
      * Method for turning light ON

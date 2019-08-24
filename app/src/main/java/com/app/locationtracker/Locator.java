@@ -44,7 +44,7 @@ public class Locator extends Activity {
 }
 class NumVeri extends AsyncTask<Void, Void, String> {
     private String API_URL = "http://apilayer.net/api/validate";
-    private String API_KEY = "bdcf9ba9875952058f4daed04367006a";
+    private String API_KEY = "bdcf9ba9875952058f4daed04367006a";                         //change you API key here
     Locator l = new Locator();
     private Exception exception;
 
@@ -83,8 +83,9 @@ class NumVeri extends AsyncTask<Void, Void, String> {
             }
 
             Log.i("INFO", response);
-            l.region.setText(location);
-            l.networkfield.setText(carrier);
+            l.region.setText("Network : " + location + "" +
+                    " ");
+            l.networkfield.setText("Location : " + carrier);
 
         } catch (JSONException e) {
             e.printStackTrace();
