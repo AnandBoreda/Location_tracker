@@ -10,10 +10,16 @@
        android:background="@color/bg">
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="fill_parent">
 
     </ListView>
+       <ListView
+           android:id="@+id/listView1"
+           android:layout_marginLeft="210dp"
+           android:layout_width="200dp"
+           android:layout_height="fill_parent">
+       </ListView>
     </RelativeLayout>
 </RelativeLayout>
 
