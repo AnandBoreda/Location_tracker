@@ -20,12 +20,12 @@
         android:text="BLOCKED LIST"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/num"
         android:layout_alignTop="@+id/text_blocklist"
         android:layout_marginTop="65dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="No records found"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 </RelativeLayout>
