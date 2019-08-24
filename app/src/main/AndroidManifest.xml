@@ -21,7 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".SugLvlChart"/>
         <activity android:name=".SugarChartMain" />
         <activity android:name=".AtRisk" />
@@ -71,7 +71,6 @@
         <activity android:name=".HbA1cMain" />
         <activity android:name=".MainActivity" />
         <activity android:name=".DiabetesMain" />
-        <activity android:name=".SugarLevelsMain" />
         <activity android:name=".BSWorldMap" />
         <activity android:name=".SugarInfo" />
         <activity android:name=".SugarLevels" />
@@ -99,7 +98,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="YOUR_ADMOB_APP_ID" />
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>
