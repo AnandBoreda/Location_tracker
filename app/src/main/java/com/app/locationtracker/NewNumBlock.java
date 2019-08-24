@@ -8,18 +8,20 @@ import android.view.View;
 import android.widget.EditText;
 
 public class NewNumBlock extends AppCompatActivity {
-   // EditText number;
+   EditText number;
+   static String n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       /* setContentView(R.layout.activity_new_num_block);
-        number = findViewById(R.id.textValue);*/
+       setContentView(R.layout.activity_new_num_block);
+       number = findViewById(R.id.textValue);
+       n = number.getText().toString().trim();
     }
 
-  /*  public void numpass(View view) {
+   public void numpass(View view) {
         Intent i = new Intent(getApplicationContext(), BlockedList.class);
-        i.putExtra("number",number.getText());
+        i.putExtra("number",n);
         startActivity(i);
-    } */
+    }
 }
