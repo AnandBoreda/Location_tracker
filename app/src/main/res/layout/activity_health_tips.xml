@@ -9,8 +9,8 @@
             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/linearLayout1111" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="0dp" android:layout_alignParentTop="true">
                 <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/adView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     ads:adSize="BANNER"

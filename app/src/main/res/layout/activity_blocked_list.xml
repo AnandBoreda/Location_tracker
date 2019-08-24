@@ -18,19 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="BLOCKED LIST"/>
+
     <TextView
-        android:textSize="35sp"
-        android:textColor="@color/bg"
-        android:gravity="center_horizontal"
-        android:id="@+id/vw"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="  No Records Found !!!"
-        android:layout_centerVertical="true"/>
-    <ListView
-        android:id="@+id/list_item_iterator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_blocklist"/>
+        android:id="@+id/num"
+        android:layout_alignTop="@+id/text_blocklist"
+        android:layout_marginTop="65dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="No records found"
+        android:textSize="20dp" />
 </RelativeLayout>

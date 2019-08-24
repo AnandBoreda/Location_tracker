@@ -118,7 +118,4 @@ public class BlockContacts extends AppCompatActivity {
 */
     }
 
-    public void fromcontact(View view) {
-
-    }
 }

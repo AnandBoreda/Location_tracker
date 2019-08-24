@@ -44,6 +44,7 @@
                     android:inputType="phone"/>
                 <Button
                     android:textSize="26sp"
+                    android:onClick="numpass"
                     android:textColor="#ffffff"
                     android:id="@+id/btnDone"
                     android:background="@drawable/button_style"
