@@ -4,12 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 
 public class ColorLightMain extends AppCompatActivity {
-    final static int INTERVAL = 1000;
     private static View myView = null;
-    boolean whichColor = true;
+    long timeout = Long.MAX_VALUE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,32 +18,27 @@ public class ColorLightMain extends AppCompatActivity {
         setContentView(R.layout.activity_color_light_main);
         myView =  findViewById(R.id.my_view);
         myView.setBackgroundColor(Color.RED);// set initial colour
-        new Thread(new Runnable() {
-            public void run() {
-                while (true) {
-                    try {
-                        Thread.sleep(INTERVAL);
-                    }
-                    catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    updateColor();
-                    whichColor = !whichColor;
-                }
-            }
-        }).start();
+       change();
     }
+    void change() {
+        final int[] colors = {Color.GREEN, Color.YELLOW, Color.RED,Color.BLACK,Color.BLUE, Color.CYAN, Color.MAGENTA,Color.GRAY};
+        CountDownTimer ctd = new CountDownTimer(timeout, 2000) {
 
-    private void updateColor() {
-        runOnUiThread(new Runnable() {
+            int current = 0;
+
             @Override
-            public void run() {
-                if (whichColor)
-                    myView.setBackgroundColor(Color.RED);
-                else
-                    myView.setBackgroundColor(Color.GREEN);
+            public void onTick(long arg0) {
+                Log.d("TEST", "Current color index: " + current);
+                myView.setBackgroundColor(colors[current++]);
+                if (current == 8)
+                    current = 0;
             }
-        });
-    }
 
+            @Override
+            public void onFinish() {
+            }
+        };
+
+        ctd.start();
+    }
 }

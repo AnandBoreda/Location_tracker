@@ -2,7 +2,11 @@ package com.app.locationtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
@@ -73,6 +77,14 @@ public class SugReport extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
+        Intertialshow();
+    }
+
+    public void sugrepo(View view) {
+        String url = "https://www.google.com";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
         Intertialshow();
     }
 }

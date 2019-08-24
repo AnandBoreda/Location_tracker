@@ -64,6 +64,7 @@
                         android:typeface="serif"
                         android:textColor="#ffffff"
                         android:id="@+id/mail"
+                        android:onClick="sugrepo"
                         android:background="@drawable/button_style"
                         android:layout_width="200dp"
                         android:layout_height="50dp"

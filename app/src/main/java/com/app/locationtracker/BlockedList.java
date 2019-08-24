@@ -79,7 +79,7 @@ public class BlockedList extends NewNumBlock {
         Intent intent = getIntent();
         String value = intent.getStringExtra("number");
         num.setText(value);
-        Toast.makeText(getBaseContext(),"An error Occurred",Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getBaseContext(),"An error Occurred",Toast.LENGTH_SHORT).show();
 
     }
 }

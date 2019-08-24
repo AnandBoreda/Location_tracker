@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
     { finish(); } }
 
     public void start_btn(View view) {
-        Intertialshow();
         startActivity(new Intent(this, Home.class));
+        Intertialshow();
 
     }
 

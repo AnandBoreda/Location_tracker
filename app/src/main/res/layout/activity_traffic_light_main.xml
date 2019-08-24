@@ -5,5 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TrafficLightMain">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/bg"
+        android:layout_height="match_parent">
+    <Button
+        android:layout_width="150dp"
+        android:id="@+id/button1"
+        android:layout_height="150dp" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

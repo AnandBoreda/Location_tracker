@@ -19,13 +19,14 @@ import com.google.android.gms.ads.InterstitialAd;
 public class RingtonesSave extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     AdView mAdView;
-    TextView txtView;
+    TextView txtView,ringtxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ringtones_save);
         txtView = findViewById(R.id.txtView);
+        ringtxt = findViewById(R.id.ringtxt);
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
         //ca-app-pub-3940256099942544/8691691433
@@ -83,7 +84,6 @@ public class RingtonesSave extends AppCompatActivity {
     {
         Intertialshow();
     }
-//TODO error : app crashing
     public void files(View view) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if(Settings.System.canWrite(this)){
@@ -96,12 +96,15 @@ public class RingtonesSave extends AppCompatActivity {
                 intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_SILENT, false);
                 intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, true);
                 startActivityForResult(intent, 999);
+                ringtxt.setText("Ring Tone set successfully, enjoy it when someone calls you");
+                Intertialshow();
             }
             else{
                 //Migrate to Setting write permission screen.
                 Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
                 intent.setData(Uri.parse("package:" + this.getPackageName()));
                 startActivity(intent);
+                Intertialshow();
             }
         }
 //        final Uri currentTone= RingtoneManager.getActualDefaultRingtoneUri(RingtonesSave.this, RingtoneManager.TYPE_ALARM);

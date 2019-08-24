@@ -16,10 +16,12 @@
 
     <SeekBar
         android:id="@+id/seekBar"
+        android:layout_marginTop="410sp"
         android:layout_width="match_parent"
+        android:background="#00FFCC"
         android:scrollbarStyle="outsideOverlay"
-        android:progressTint="@color/bg"
-        android:backgroundTint="@color/cm"
+        android:layout_marginBottom="300sp"
+        android:progressTint="#FF0000"
         android:layout_height="match_parent" />
 
 </RelativeLayout>
