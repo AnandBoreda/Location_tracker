@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file is /res/layout/main.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:background="@color/bg"
     android:layout_height="fill_parent">
-
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/bannerID">
+    </com.google.android.gms.ads.AdView>
     <EditText android:id="@+id/wordsToSpeak"
         android:text=" enter your name"
         android:layout_width="fill_parent"
@@ -63,15 +73,23 @@
         android:onClick="doButton"
         android:background="@drawable/button_style"
         android:enabled="false" />
+
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/native_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="300x250"
+        ads:adUnitId="@string/bannerID">
+    </com.google.android.gms.ads.AdView>
+
+    <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="match_parent"
+        android:translationY="400dp"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/1033173712">
-    </com.google.android.gms.ads.AdView>
-
+        ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
 </LinearLayout>

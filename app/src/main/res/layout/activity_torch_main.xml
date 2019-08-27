@@ -9,6 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TorchMain">
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/native_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="300x250"
+        ads:adUnitId="@string/bannerID">
+    </com.google.android.gms.ads.AdView>
 
 
     <Button
@@ -20,5 +28,14 @@
         android:layout_gravity="center"
         android:layout_marginBottom="258dp"
         android:background="@drawable/lgt_start"
-         />
+         /> <com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/banner_adView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    ads:adSize="BANNER"
+    ads:adUnitId="@string/bannerID">
+</com.google.android.gms.ads.AdView>
 </RelativeLayout>

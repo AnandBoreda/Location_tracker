@@ -17,8 +17,16 @@ import android.widget.Button;
 
 import androidx.annotation.RequiresApi;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class TorchMain extends Activity {
+    AdView mAdView,banner,nativ;
+
 
     private CameraManager objCameraManager;
     private String mCameraId;
@@ -35,6 +43,28 @@ public class TorchMain extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_torch_main);
+        //native
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        nativ = findViewById(R.id.native_adView);
+        AdRequest natrequest = new AdRequest.Builder().build();
+        nativ.loadAd(natrequest);
+
+        //banner
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        banner = findViewById(R.id.banner_adView);
+        AdRequest adrequest = new AdRequest.Builder().build();
+        banner.loadAd(adrequest);
+//end-banner
+
         ivOnOFF = findViewById(R.id.ivOnOFF);
         isTorchOn = false;
 

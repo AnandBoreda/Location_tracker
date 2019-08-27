@@ -18,7 +18,7 @@
         android:id="@+id/seekBar"
         android:layout_marginTop="410sp"
         android:layout_width="match_parent"
-        android:background="#00FFCC"
+        android:background="@drawable/shadow"
         android:scrollbarStyle="outsideOverlay"
         android:layout_marginBottom="300sp"
         android:progressTint="#FF0000"

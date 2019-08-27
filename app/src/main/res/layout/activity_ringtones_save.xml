@@ -10,30 +10,46 @@
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:translationY="5000dp"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
     <RelativeLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
-    <Button
-        android:layout_width="200dp"
-        android:layout_marginTop="150dp"
-        android:text="select from "
-        android:layout_marginLeft="100dp"
-        android:background="@drawable/button_style"
-        android:layout_height="60dp"
-        android:onClick="files" />
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/native_adView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            ads:adSize="300x250"
+            ads:adUnitId="@string/bannerID">
+        </com.google.android.gms.ads.AdView>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="105dp"
+            android:layout_marginRight="111dp"
+            android:background="@drawable/button_style"
+            android:onClick="files"
+            android:text="select from " />
 
         <TextView
-            android:layout_width="match_parent"
             android:id="@+id/ringtxt"
-            android:gravity="center_horizontal|center|center_vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="400dp"
-            android:textSize="25sp"
+            android:layout_marginTop="500dp"
+            android:gravity="center_horizontal|center|center_vertical"
             android:text="please select ringtone by clicking the button above, and give permission"
-            />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/txtView"
@@ -41,7 +57,17 @@
             android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner_adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/bannerID">
+        </com.google.android.gms.ads.AdView>
 
     </RelativeLayout>
 

@@ -33,6 +33,7 @@
     <string name="msg_error">Error: No Flash Found</string>
     <string name="ad_unit_id">ca-app-pub-3940256099942544/2177258514</string>
     <string name="lbl_ok">OK</string>
+    <string name="bannerID">ca-app-pub-3940256099942544/6300978111</string>
 
     <string-array name="array_technology">
 

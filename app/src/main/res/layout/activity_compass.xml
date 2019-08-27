@@ -3,6 +3,16 @@
     <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
         <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
             <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/linearLayout1111" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="0dp" android:layout_alignParentTop="true">
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/native_adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                ads:adSize="300x250"
+                ads:adUnitId="@string/bannerID">
+            </com.google.android.gms.ads.AdView>
                 <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/adView"
                     android:layout_width="match_parent"
@@ -10,9 +20,10 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     ads:adSize="BANNER"
-                    ads:adUnitId="ca-app-pub-3940256099942544/1033173712"></com.google.android.gms.ads.AdView>
+                    android:translationY="5000dp"
+                    ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
             </LinearLayout>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/linearLayout1111">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="5dp" android:layout_below="@+id/linearLayout1111">
                 <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                     <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
                         <TableRow android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="1.5" android:layout_weight="0.5">
@@ -44,6 +55,7 @@
                                     android:background="@drawable/ad"
                                     android:gravity="bottom|center_vertical|center_horizontal|center"
                                     android:paddingBottom="7dp"
+                                    android:onClick="compad"
                                     android:singleLine="false"
                                     android:text="ad"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -72,8 +84,17 @@
                         </TableRow>
                     </TableLayout>
                 </RelativeLayout>
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/bannerID">
+                </com.google.android.gms.ads.AdView>
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
-    <!--  <include layout="@layout/ad_layout"/> -->
 </RelativeLayout>

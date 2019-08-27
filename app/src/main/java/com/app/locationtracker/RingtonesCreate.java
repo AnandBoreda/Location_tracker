@@ -8,6 +8,9 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.io.File;
 
 import android.app.Activity;
@@ -22,8 +25,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RingtonesCreate extends Activity implements OnInitListener {
+
     private InterstitialAd mInterstitialAd;
-    AdView mAdView;
+    AdView mAdView,banner,nativ;
+
     private EditText words = null;
     private Button speakBtn = null;
     private EditText filename = null;
@@ -43,6 +48,28 @@ public class RingtonesCreate extends Activity implements OnInitListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ringtones_create);
+        //native
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        nativ = findViewById(R.id.native_adView);
+        AdRequest natrequest = new AdRequest.Builder().build();
+        nativ.loadAd(natrequest);
+
+        //banner
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        banner = findViewById(R.id.banner_adView);
+        AdRequest adrequest = new AdRequest.Builder().build();
+        banner.loadAd(adrequest);
+//end-banner
+
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
         //ca-app-pub-3940256099942544/8691691433

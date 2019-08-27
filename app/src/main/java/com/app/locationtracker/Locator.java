@@ -11,6 +11,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -26,6 +33,7 @@ public class Locator extends Activity {
     Spinner s;
     Button b;
     static String mobile, text;
+    AdView mAdView,banner,nativ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +42,30 @@ public class Locator extends Activity {
         s = findViewById(R.id.country_code);
         networkfield = findViewById(R.id.network_field);
         region = findViewById(R.id.region);
+
+        //banner
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        banner = findViewById(R.id.banner_adView);
+        AdRequest adrequest = new AdRequest.Builder().build();
+        banner.loadAd(adrequest);
+//end-banner
+
+        //native
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        nativ = findViewById(R.id.native_adView);
+        AdRequest natrequest = new AdRequest.Builder().build();
+        nativ.loadAd(natrequest);
+
+        //native-end
 
     }
 

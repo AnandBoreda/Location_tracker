@@ -20,11 +20,20 @@
                 android:layout_height="360dp"
                 android:layout_marginTop="0dp"
                 android:layout_alignParentTop="true">
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/native_adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    ads:adSize="300x250"
+                    ads:adUnitId="@string/bannerID">
+                </com.google.android.gms.ads.AdView>
                 <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/adView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     ads:adSize="BANNER"
+                    android:translationY="4000dp"
                     ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
                 <FrameLayout
                     android:id="@+id/fl_adplaceholder"
@@ -34,7 +43,7 @@
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_marginTop="5dp"
                 android:layout_below="@+id/linearLayout1111">
                 <RelativeLayout
@@ -108,11 +117,12 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5">
-                      <!--      <ImageView
+                           <ImageView
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textSize="13sp"
                                 android:typeface="serif"
                                 android:textColor="#ffffff"
+                               android:onClick="blockad"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:id="@+id/mobilead"
                                 android:paddingBottom="7dp"
@@ -120,10 +130,10 @@
                                 android:layout_height="115dp"
 
                                 android:layout_marginLeft="20dp"
-                                android:src="@drawable/flashalertsad1"
+                                android:src="@drawable/ad"
                                 android:text=""
                                 android:singleLine="false"/>
-                         -->
+
                         </RelativeLayout>
                     </TableRow>
                     <TableRow
@@ -173,22 +183,33 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5">
-                         <!--   <ImageView
+                           <ImageView
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textSize="15sp"
                                 android:typeface="serif"
                                 android:textColor="#ffffff"
+                               android:onClick="blockad1"
                                 android:gravity="bottom|center_vertical|center_horizontal|center"
                                 android:id="@+id/gpsid"
                                 android:paddingBottom="7dp"
                                 android:layout_width="100dp"
                                 android:layout_height="115dp"
                                 android:layout_marginLeft="15dp"
-                                android:src="@drawable/mynamead"
-                                android:text=""/> -->
+                                android:src="@drawable/ad"
+                                android:text=""/>
                         </RelativeLayout>
                     </TableRow>
                 </TableLayout>
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner_adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/bannerID">
+                </com.google.android.gms.ads.AdView>
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

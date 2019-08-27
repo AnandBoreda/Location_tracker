@@ -25,12 +25,11 @@
             android:layout_below="@+id/splash1"
             android:layout_marginStart="70dp"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="103dp"
             android:layout_marginEnd="70dp"
             android:layout_marginRight="70dp"
             android:layout_marginBottom="70dp"
-            android:background="@drawable/shadow"
-            />
+            android:background="@drawable/shadow" />
     </RelativeLayout>
 
 

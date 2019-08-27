@@ -15,12 +15,15 @@
         android:layout_height="360dp"
         android:layout_marginTop="0dp"
         android:layout_alignParentTop="true">
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/native_adView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
+            android:layout_height="wrap_content"
+            ads:adSize="300x250"
+            ads:adUnitId="@string/bannerID">
+        </com.google.android.gms.ads.AdView>
+
     </LinearLayout></RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,146 +34,96 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:translationY="400dp">
-        <!-- <RelativeLayout
-     android:id="@+id/rel1"
-     android:layout_width="match_parent"
-     android:layout_height="86dp"
-     android:layout_marginTop="10dp"
-     android:layout_centerHorizontal="true">
-             <ImageView
-     android:id="@+id/app1"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginLeft="10dp"
-     android:layout_marginTop="3dp"
-     android:src="@drawable/selfie"
-     android:layout_alignParentLeft="true"/>
-             <ImageView
-     android:id="@+id/app2"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginTop="3dp"
-     android:src="@drawable/marriage"
-     android:layout_centerHorizontal="true"/>
-             <ImageView
-     android:id="@+id/app3"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginTop="3dp"
-     android:layout_marginRight="10dp"
-     android:src="@drawable/girlsselfie"
-     android:layout_alignParentRight="true"/>
-         </RelativeLayout>
-         <RelativeLayout
-     android:id="@+id/rel2"
-     android:layout_width="match_parent"
-     android:layout_height="86dp"
-     android:layout_marginTop="10dp"
-     android:layout_below="@+id/rel1"
-     android:layout_centerHorizontal="true">
-             <ImageView
-     android:id="@+id/app5"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginTop="3dp"
-     android:src="@drawable/bdy"
-     android:layout_centerHorizontal="true"/>
-             <ImageView
-     android:id="@+id/app6"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginTop="3dp"
-     android:layout_marginRight="10dp"
-     android:src="@drawable/rain"
-     android:layout_alignParentRight="true"/>
-             <ImageView
-     android:id="@+id/app4"
-     android:layout_width="70dp"
-     android:layout_height="70dp"
-     android:layout_marginLeft="12dp"
-     android:src="@drawable/hall"
-     android:layout_alignParentLeft="true"
-     android:layout_alignParentTop="true"/>
-         </RelativeLayout>
+
+
          <RelativeLayout
      android:id="@+id/rel3"
      android:layout_width="match_parent"
      android:layout_height="86dp"
      android:layout_marginTop="10dp"
-     android:layout_below="@+id/rel2"
      android:layout_centerHorizontal="true">
              <ImageView
      android:id="@+id/app7"
      android:layout_width="70dp"
      android:layout_height="70dp"
+                 android:onClick="exitad"
      android:layout_marginLeft="10dp"
      android:layout_marginTop="3dp"
-     android:src="@drawable/selfie"
+     android:src="@drawable/ad"
      android:layout_alignParentLeft="true"/>
              <ImageView
      android:id="@+id/app8"
      android:layout_width="70dp"
+                 android:onClick="exitad1"
      android:layout_height="70dp"
      android:layout_marginTop="3dp"
-     android:src="@drawable/beach"
+     android:src="@drawable/ad"
      android:layout_centerHorizontal="true"/>
              <ImageView
      android:id="@+id/app9"
      android:layout_width="70dp"
      android:layout_height="70dp"
+                 android:onClick="exitad2"
      android:layout_marginTop="3dp"
      android:layout_marginRight="10dp"
-     android:src="@drawable/hall"
+     android:src="@drawable/ad"
      android:layout_alignParentRight="true"/>
-         </RelativeLayout> -->
-        <!-- <LinearLayout
-    android:gravity="center"
-    android:orientation="vertical"
-    android:id="@+id/linearLayout1111"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="0dp"
-    android:layout_below="@+id/rel3">
-            <FrameLayout
-    android:id="@+id/fl_adplaceholder"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"/>
-        </LinearLayout> -->
-        <Button
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="19sp"
-            android:typeface="serif"
-            android:textColor="#ffffff"
-            android:onClick="exit"
-            android:gravity="center"
-            android:id="@+id/exit"
-            android:background="@drawable/shadow"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="57dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:text="Exit"
-            android:layout_below="@+id/linearLayout1111"
-            android:layout_centerHorizontal="true"/>
-        <Button
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="19sp"
-            android:typeface="serif"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:onClick="cancel"
-            android:id="@+id/cancel"
-            android:background="@drawable/shadow"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="57dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:text="Cancel"
-            android:layout_below="@+id/exit"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationY="520dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/1033173712" />
 </RelativeLayout>
+    </RelativeLayout><Button
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textSize="19sp"
+    android:typeface="serif"
+    android:textColor="#ffffff"
+    android:onClick="exit"
+    android:gravity="center"
+    android:translationY="500dp"
+    android:id="@+id/exit"
+    android:background="@drawable/shadow"
+    android:layout_width="120dp"
+    android:layout_height="50dp"
+    android:layout_marginLeft="57dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    android:text="Exit"
+    android:layout_centerHorizontal="true"/>
+    <Button
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="19sp"
+        android:typeface="serif"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:translationY="500dp"
+        android:onClick="cancel"
+        android:id="@+id/cancel"
+        android:background="@drawable/shadow"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Cancel"
+        android:layout_below="@+id/exit"
+        android:layout_centerHorizontal="true"/>  <com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/banner_adView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    ads:adSize="BANNER"
+    ads:adUnitId="@string/bannerID"/>
+</RelativeLayout>
+
+
+
+
+

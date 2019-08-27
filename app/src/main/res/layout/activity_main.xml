@@ -17,14 +17,14 @@
                 android:layout_marginTop="0dp"
                 android:layout_alignParentTop="true">
 
-                <com.google.android.gms.ads.NativeExpressAdView
-                    android:id="@+id/av"
-                    android:layout_width="349dp"
-                    android:layout_height="312dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    ads:adSize="320x300"
-                    ads:adUnitId="@string/ad_unit_id"/>
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/native_adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    ads:adSize="300x250"
+                    ads:adUnitId="@string/bannerID">
+                </com.google.android.gms.ads.AdView>
             </LinearLayout>
 
 
@@ -35,7 +35,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="300dp">
 
                     <Button
                         android:id="@+id/start_button"
@@ -44,8 +44,8 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="0dp"
                         android:background="@drawable/button_style"
-                        android:text="@string/app_name"
                         android:onClick="start_btn"
+                        android:text="@string/app_name"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ffffff"
                         android:textSize="15sp"
@@ -78,8 +78,8 @@
                                     android:layout_marginTop="5sp"
                                     android:layout_marginRight="35sp"
                                     android:background="@drawable/star"
-                                    android:onClick="rate_us"
                                     android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:onClick="rate_us"
                                     android:paddingBottom="0dp"
                                     android:singleLine="true"
                                     android:text="Rate Us"
@@ -103,9 +103,9 @@
                                     android:layout_marginTop="5sp"
                                     android:background="@drawable/share"
                                     android:gravity="bottom|center_vertical|center_horizontal|center"
+                                    android:onClick="sharebtn"
                                     android:paddingBottom="0dp"
                                     android:singleLine="true"
-                                    android:onClick="sharebtn"
                                     android:text="Share"
                                     android:textAppearance="@style/TextAppearance.AppCompat"
                                     android:textColor="#000000"
@@ -114,11 +114,22 @@
                             </RelativeLayout>
                         </TableRow>
                     </TableLayout>
-                  </RelativeLayout>
+                </RelativeLayout>
             </RelativeLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerID">
+            </com.google.android.gms.ads.AdView>
             <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/adView"
                 android:layout_width="match_parent"
+                android:translationY="520dp"
                 android:layout_height="match_parent"
                 ads:adSize="BANNER"
                 ads:adUnitId="ca-app-pub-3940256099942544/1033173712"/>
