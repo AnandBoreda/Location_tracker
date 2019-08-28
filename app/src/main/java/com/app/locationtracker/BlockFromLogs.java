@@ -11,13 +11,15 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class BlockFromLogs extends AppCompatActivity {
+    AdView mAdView,banner,nativ;
+
     private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block_from_logs);
-       /* MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544/1033173712");
         //ca-app-pub-3940256099942544/8691691433
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -69,7 +71,6 @@ public class BlockFromLogs extends AppCompatActivity {
     { if (mInterstitialAd.isLoaded()) { mInterstitialAd.show(); }
     else
     { finish(); } }
-    */
 
-}
+
 }
